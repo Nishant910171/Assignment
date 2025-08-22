@@ -1,38 +1,538 @@
-.App {
+body {
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #c7dedb;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.form-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.signup-form {
+  width: 90%;
+  max-width: 900px;
+  min-width: 320px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.heading {
+  width: 100%;
+  height: auto;
+  min-height: 80px;
+  background-color: #00695c;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading h2 {
+  margin: 0;
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.form {
+  padding: 30px;
+}
+
+.two-column {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.input-div {
+  width: 48%;
+  margin-bottom: 2%;
+}
+
+input {
+  width: 100%;
+  padding: 12px 8px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-bottom: 2px solid #2e2e2e;
+  background-color: #f5f5f5;
+}
+
+.btn-div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn {
+  width: 30%;
+  min-width: 120px;
+  background: #00695c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 3%;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background: #004d40;
+}
+
+/* Login Form CSS */
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-form-container {
+  width: 90%;
+  max-width: 500px;
+  min-width: 320px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.login-heading {
+  width: 100%;
+  height: auto;
+  min-height: 80px;
+  background-color: #00695c;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-heading h2 {
+  margin: 0;
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.login-heading p {
+  margin: 5px 0 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+}
+
+.login-form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.form-div {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-btn {
+  width: 100%;
+  max-width: 200px;
+  background: #00695c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #004d40;
+}
+
+.login-para {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.login-para p {
+  font-size: 14px;
+  margin: 10px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-para a {
+  color: #00695c;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.login-para a:hover {
+  text-decoration: underline;
+}
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+  .signup-form {
+    max-width: 1000px;
+  }
+  
+  .login-form-container {
+    max-width: 600px;
+  }
+  
+  .form {
+    padding: 40px;
+  }
+  
+  .heading h2,
+  .login-heading h2 {
+    font-size: 1.8rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Medium Desktop (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .signup-form {
+    width: 85%;
+    max-width: 800px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .login-form-container {
+    width: 70%;
+    max-width: 450px;
   }
 }
+
+/* Small Desktop and Tablet (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .signup-form {
+    width: 85%;
+    max-width: 700px;
+  }
+  
+  .login-form-container {
+    width: 75%;
+    max-width: 400px;
+  }
+  
+  .form {
+    padding: 25px;
+  }
+  
+  .two-column {
+    gap: 15px;
+  }
+}
+
+/* Mobile & Small Tablets (481px to 767px) */
+@media (max-width: 767px) and (min-width: 481px) {
+  .signup-form {
+    width: 95%;
+    max-width: 100%;
+    min-width: unset;
+  }
+
+  .login-form-container {
+    width: 90%;
+    max-width: 100%;
+    min-width: unset;
+  }
+
+  .form {
+    padding: 20px;
+  }
+
+  .input-div {
+    width: 100%;
+  }
+
+  .two-column {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .btn-div {
+    justify-content: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 200px;
+    margin-right: 0;
+  }
+
+  .login-para p {
+    font-size: 13px;
+  }
+}
+
+/* Extra Small Devices (phones < 480px) */
+@media (max-width: 480px) {
+  .form-container,
+  .login-container {
+    padding: 10px;
+  }
+
+  .signup-form,
+  .login-form-container {
+    width: 100%;
+    min-width: unset;
+    border-radius: 6px;
+  }
+
+  .heading,
+  .login-heading {
+    padding: 15px 0;
+    min-height: 60px;
+  }
+
+  .heading h2,
+  .login-heading h2 {
+    font-size: 1.2rem;
+  }
+
+  .login-heading p {
+    font-size: 0.8rem;
+  }
+
+  .form {
+    padding: 15px;
+  }
+
+  .form-div {
+    padding: 15px;
+  }
+
+  .input-div {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .two-column {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    font-size: 13px;
+    padding: 10px 8px;
+  }
+
+  .btn,
+  .login-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
+    margin-right: 0;
+  }
+
+  .btn-div {
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .login-para p {
+    font-size: 12px;
+    margin: 8px 0;
+  }
+
+  .login-form {
+    width: 100%;
+    padding: 15px 0;
+  }
+}
+
+/* Very Small Devices (phones < 360px) */
+@media (max-width: 359px) {
+  .form-container,
+  .login-container {
+    padding: 5px;
+  }
+
+  .signup-form,
+  .login-form-container {
+    border-radius: 4px;
+  }
+
+  .heading,
+  .login-heading {
+    padding: 10px 0;
+    min-height: 50px;
+  }
+
+  .heading h2,
+  .login-heading h2 {
+    font-size: 1.1rem;
+  }
+
+  .form,
+  .form-div {
+    padding: 10px;
+  }
+
+  input {
+    font-size: 12px;
+    padding: 8px 6px;
+  }
+
+  .btn,
+  .login-btn {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .login-para p {
+    font-size: 11px;
+  }
+}
+
+/* Landscape orientation for mobile devices */
+@media (max-height: 500px) and (orientation: landscape) {
+  .form-container,
+  .login-container {
+    padding: 10px;
+    min-height: 100vh;
+  }
+
+  .signup-form,
+  .login-form-container {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .heading,
+  .login-heading {
+    padding: 10px 0;
+    min-height: 50px;
+  }
+
+  .form {
+    padding: 15px;
+  }
+
+  .form-div {
+    padding: 15px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .signup-form,
+  .login-form-container {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .btn,
+  .login-btn {
+    min-height: 44px; /* Minimum touch target size */
+    padding: 14px 20px;
+  }
+  
+  input {
+    min-height: 44px;
+    padding: 14px 10px;
+  }
+  
+  .btn:hover,
+  .login-btn:hover {
+    background: #00695c; /* Remove hover effects on touch devices */
+  }
+}
+
+/* Prevent zoom on input focus for iOS */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    font-size: 16px;
+  }
+}
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better focus indicators for accessibility */
+.btn:focus,
+.login-btn:focus,
+input:focus {
+  outline: 2px solid #00695c;
+  outline-offset: 2px;
+}
+
+/* Loading states for buttons */
+.btn:disabled,
+.login-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Print styles */
+@media print {
+  .signup-form,
+  .login-form-container {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .btn,
+  .login-btn {
+    background: #ccc !important;
+    color: #000 !important;
+  }
+}
+
